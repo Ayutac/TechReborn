@@ -149,9 +149,9 @@ public class BlockRubberLog extends PillarBlock {
 				if (!playerIn.getInventory().insertStack(TRContent.Parts.SAP.getStack())) {
 					WorldUtils.dropItem(TRContent.Parts.SAP.getStack(), worldIn, pos.offset(hitResult.getSide()));
 				}
-				if (playerIn instanceof ServerPlayerEntity) {
+				/*if (playerIn instanceof ServerPlayerEntity) {
 					TRRecipeHandler.unlockTRRecipes((ServerPlayerEntity) playerIn);
-				}
+				}*/
 				return ActionResult.SUCCESS;
 			}
 		}
