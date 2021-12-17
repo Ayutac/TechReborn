@@ -37,6 +37,7 @@ import reborncore.common.crafting.ingredient.RebornIngredient;
 import reborncore.common.fluid.container.FluidInstance;
 import reborncore.common.util.Tank;
 import techreborn.blockentity.machine.multiblock.FluidReplicatorBlockEntity;
+import techreborn.init.TRContent;
 import techreborn.utils.FluidUtils;
 
 public class FluidReplicatorRecipe extends RebornFluidRecipe {
@@ -51,6 +52,11 @@ public class FluidReplicatorRecipe extends RebornFluidRecipe {
 
 	public FluidReplicatorRecipe(RebornRecipeType<?> type, Identifier name, DefaultedList<RebornIngredient> ingredients, DefaultedList<ItemStack> outputs, int power, int time, FluidInstance fluid) {
 		super(type, name, ingredients, outputs, power, time, fluid);
+	}
+
+	@Override
+	public ItemStack createIcon() {
+		return new ItemStack(TRContent.Machine.FLUID_REPLICATOR);
 	}
 
 	@Override

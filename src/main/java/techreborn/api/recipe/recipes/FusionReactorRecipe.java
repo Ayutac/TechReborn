@@ -34,6 +34,7 @@ import reborncore.common.crafting.RebornRecipe;
 import reborncore.common.crafting.RebornRecipeType;
 import reborncore.common.crafting.ingredient.RebornIngredient;
 import techreborn.blockentity.machine.multiblock.FusionControlComputerBlockEntity;
+import techreborn.init.TRContent;
 
 /**
  * @author drcrazy
@@ -55,6 +56,11 @@ public class FusionReactorRecipe extends RebornRecipe {
 
 	public int getStartEnergy() {
 		return startE;
+	}
+
+	@Override
+	public ItemStack createIcon() {
+		return new ItemStack(TRContent.Machine.FUSION_CONTROL_COMPUTER);
 	}
 
 	@Override

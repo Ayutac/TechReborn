@@ -34,6 +34,7 @@ import reborncore.common.crafting.ingredient.RebornIngredient;
 import reborncore.common.fluid.container.FluidInstance;
 import reborncore.common.util.Tank;
 import techreborn.blockentity.machine.multiblock.IndustrialSawmillBlockEntity;
+import techreborn.init.TRContent;
 
 public class IndustrialSawmillRecipe extends RebornFluidRecipe {
 
@@ -47,6 +48,11 @@ public class IndustrialSawmillRecipe extends RebornFluidRecipe {
 
 	public IndustrialSawmillRecipe(RebornRecipeType<?> type, Identifier name, DefaultedList<RebornIngredient> ingredients, DefaultedList<ItemStack> outputs, int power, int time, FluidInstance fluid) {
 		super(type, name, ingredients, outputs, power, time, fluid);
+	}
+
+	@Override
+	public ItemStack createIcon() {
+		return new ItemStack(TRContent.Machine.INDUSTRIAL_SAWMILL);
 	}
 
 	@Override

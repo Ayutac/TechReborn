@@ -39,6 +39,7 @@ import net.minecraft.world.World;
 import reborncore.common.crafting.RebornRecipe;
 import reborncore.common.crafting.RebornRecipeType;
 import reborncore.common.crafting.ingredient.RebornIngredient;
+import techreborn.init.TRContent;
 
 import java.util.Collections;
 import java.util.List;
@@ -54,6 +55,11 @@ public class RollingMachineRecipe extends RebornRecipe {
 	public RollingMachineRecipe(RebornRecipeType<?> type, Identifier name, ShapedRecipe recipe) {
 		super(type, name);
 		this.shapedRecipe = recipe;
+	}
+
+	@Override
+	public ItemStack createIcon() {
+		return new ItemStack(TRContent.Machine.ROLLING_MACHINE);
 	}
 
 	@Override

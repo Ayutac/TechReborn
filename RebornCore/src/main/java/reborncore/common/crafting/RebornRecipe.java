@@ -55,6 +55,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 public class RebornRecipe implements Recipe<Inventory>, CustomOutputRecipe {
 
@@ -79,6 +80,14 @@ public class RebornRecipe implements Recipe<Inventory>, CustomOutputRecipe {
 		this.outputs = outputs;
 		this.power = power;
 		this.time = time;
+	}
+
+	@Override
+	public ItemStack createIcon() {
+		Optional<Item> catalyst = Registry.ITEM.getOrEmpty(type.name());
+		if (catalyst.isPresent())
+			return new ItemStack(catalyst.get());
+		return Recipe.super.createIcon();
 	}
 
 	public void deserialize(JsonObject jsonObject) {
@@ -238,7 +247,7 @@ public class RebornRecipe implements Recipe<Inventory>, CustomOutputRecipe {
 	//Done to try and stop the table from loading it
 	@Override
 	public boolean isIgnoredInRecipeBook() {
-		return true;
+		return false;
 	}
 
 	private boolean isDummy() {
