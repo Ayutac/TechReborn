@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+	"recipes": [
+	  "techreborn:blast_furnace/gold_ingot_from_helmet"
+	]
+  },
+  "criteria": {
+	"has_golden_helmet": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"items": [
+		  {
+			"items": ["minecraft:golden_helmet"]
+		  }
+		]
+	  }
+	},
+	"has_the_recipe": {
+	  "trigger": "minecraft:recipe_unlocked",
+	  "conditions": {
+		"recipe": "techreborn:blast_furnace/gold_ingot_from_helmet"
+	  }
+	}
+  },
+  "requirements": [
+	[
+	  "has_golden_helmet",
+	  "has_the_recipe"
+	]
+  ]
+}

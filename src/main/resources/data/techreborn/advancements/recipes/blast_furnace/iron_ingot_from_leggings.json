@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+	"recipes": [
+	  "techreborn:blast_furnace/iron_ingot_from_leggings"
+	]
+  },
+  "criteria": {
+	"has_iron_leggings": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"items": [
+		  {
+			"items": ["minecraft:iron_leggings"]
+		  }
+		]
+	  }
+	},
+	"has_the_recipe": {
+	  "trigger": "minecraft:recipe_unlocked",
+	  "conditions": {
+		"recipe": "techreborn:blast_furnace/iron_ingot_from_leggings"
+	  }
+	}
+  },
+  "requirements": [
+	[
+	  "has_iron_leggings",
+	  "has_the_recipe"
+	]
+  ]
+}
