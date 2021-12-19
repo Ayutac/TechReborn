@@ -45,9 +45,12 @@ public class GuiQuarry extends GuiBase<BuiltScreenHandler> {
 		super.drawBackground(matrixStack, f, mouseX, mouseY);
 		final Layer layer = Layer.BACKGROUND;
 
-		drawSlot(matrixStack, 8, 72, layer);
+		drawSlot(matrixStack, 8, 72, layer); // energy slot
 
-		drawSlot(matrixStack, 80, 54, layer);
+		for (int k = 0; k < QuarryBlockEntity.TOOL_SLOT_AMOUNT; k++) // tool slots
+			drawSlot(matrixStack, 18 * k + 44, 22, layer);
+		for (int k = 0; k < QuarryBlockEntity.LOOT_SLOT_AMOUNT; k++) // output slots
+			drawSlot(matrixStack, 18 * k + 44, 54, layer);
 
 		builder.drawJEIButton(matrixStack, this, 158, 5, layer);
 	}
@@ -57,7 +60,6 @@ public class GuiQuarry extends GuiBase<BuiltScreenHandler> {
 		super.drawForeground(matrixStack, mouseX, mouseY);
 		final Layer layer = Layer.FOREGROUND;
 
-		//builder.drawBurnBar(matrixStack, this, blockEntity.getScaledBurnTime(100), 100, 81, 38, mouseX, mouseY, layer);
-		//builder.drawMultiEnergyBar(matrixStack, this, 9, 19, (int) blockEntity.getEnergy(), (int) blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
+		builder.drawMultiEnergyBar(matrixStack, this, 9, 19, (int) blockEntity.getEnergy(), (int) blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
 	}
 }

@@ -558,6 +558,12 @@ public class TechRebornConfig {
 	@Config(config = "machines", category = "greenhouse_controller", key = "GreenhouseControllerEnergyPerBonemeal", comment = "Greenhouse Controller Energy usage Per Bonemeal")
 	public static int greenhouseControllerEnergyPerBonemeal = 50;
 
+	@Config(config = "machines", category = "quarry", key = "QuarryInput", comment = "Quarry Max Input (Energy per tick)")
+	public static int quarryMaxInput = 128;
+
+	@Config(config = "machines", category = "quarry", key = "QuarryMaxEnergy", comment = "Quarry Max Energy")
+	public static int quarryMaxEnergy = 10_000;
+
 	// Misc
 	@Config(config = "misc", category = "general", key = "IC2TransformersStyle", comment = "Input from dots side, output from other sides, like in IC2.")
 	public static boolean IC2TransformersStyle = true;
