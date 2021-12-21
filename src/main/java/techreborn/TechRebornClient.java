@@ -58,6 +58,7 @@ import team.reborn.energy.api.base.SimpleBatteryItem;
 import techreborn.client.render.DynamicBucketBakedModel;
 import techreborn.client.render.DynamicCellBakedModel;
 import techreborn.client.render.entitys.CableCoverRenderer;
+import techreborn.client.render.entitys.DrillHeadRenderer;
 import techreborn.client.render.entitys.StorageUnitRenderer;
 import techreborn.client.render.entitys.TurbineRenderer;
 import techreborn.events.StackToolTipHandler;
@@ -179,6 +180,8 @@ public class TechRebornClient implements ClientModInitializer {
 		BlockEntityRendererRegistry.INSTANCE.register(TRBlockEntities.STORAGE_UNIT, StorageUnitRenderer::new);
 		BlockEntityRendererRegistry.INSTANCE.register(TRBlockEntities.CABLE, CableCoverRenderer::new);
 		BlockEntityRendererRegistry.INSTANCE.register(TRBlockEntities.WIND_MILL, TurbineRenderer::new);
+		BlockEntityRendererRegistry.INSTANCE.register(TRBlockEntities.MINING_RIG, MultiblockRenderer::new);
+		BlockEntityRendererRegistry.INSTANCE.register(TRBlockEntities.DRILL_HEAD, DrillHeadRenderer::new);
 
 		registerPredicateProvider(
 				BatpackItem.class,

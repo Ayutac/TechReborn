@@ -48,6 +48,8 @@ import techreborn.blockentity.generator.basic.WindMillBlockEntity;
 import techreborn.blockentity.machine.misc.ChargeOMatBlockEntity;
 import techreborn.blockentity.machine.misc.DrainBlockEntity;
 import techreborn.blockentity.machine.multiblock.*;
+import techreborn.blockentity.machine.multiblock.miningrig.MiningRigBlockEntity;
+import techreborn.blockentity.machine.multiblock.structure.DrillHeadBlockEntity;
 import techreborn.blockentity.machine.tier1.*;
 import techreborn.blockentity.machine.tier3.ChunkLoaderBlockEntity;
 import techreborn.blockentity.machine.tier3.IndustrialCentrifugeBlockEntity;
@@ -63,6 +65,7 @@ import techreborn.blocks.generator.GenericGeneratorBlock;
 import techreborn.blocks.lighting.LampBlock;
 import techreborn.blocks.machine.tier0.IronAlloyFurnaceBlock;
 import techreborn.blocks.machine.tier0.IronFurnaceBlock;
+import techreborn.blocks.machine.tier1.BlockMiningRig;
 import techreborn.blocks.machine.tier1.PlayerDetectorBlock;
 import techreborn.blocks.machine.tier1.ResinBasinBlock;
 import techreborn.blocks.misc.*;
@@ -76,6 +79,7 @@ import techreborn.blocks.transformers.BlockMVTransformer;
 import techreborn.client.GuiType;
 import techreborn.config.TechRebornConfig;
 import techreborn.entities.EntityNukePrimed;
+import techreborn.items.DrillHeadItem;
 import techreborn.items.DynamicCellItem;
 import techreborn.items.UpgradeItem;
 import techreborn.items.armor.QuantumSuitItem;
@@ -110,6 +114,7 @@ public class TRContent {
 	public static Block STRIPPED_RUBBER_WOOD;
 	public static Block POTTED_RUBBER_SAPLING;
 	public static Block COPPER_WALL;
+	public static Block DRILL_PIPE;
 
 	// Armor
 	public static Item CLOAKING_DEVICE;
@@ -568,6 +573,8 @@ public class TRContent {
 		WIND_MILL(new GenericGeneratorBlock(null, WindMillBlockEntity::new)),
 
 		DRAIN(new GenericMachineBlock(null, DrainBlockEntity::new)),
+		MINING_RIG(new BlockMiningRig(GuiType.MINING_RIG, MiningRigBlockEntity::new)),
+		DRILL_HEAD(new BlockDrillHead(null, DrillHeadBlockEntity::new)),
 
 		ADJUSTABLE_SU(new AdjustableSUBlock()),
 		CHARGE_O_MAT(new GenericMachineBlock(GuiType.CHARGEBENCH, ChargeOMatBlockEntity::new)),
@@ -856,6 +863,44 @@ public class TRContent {
 			name = this.toString().toLowerCase(Locale.ROOT);
 			item = new Item(new Item.Settings().group(TechReborn.ITEMGROUP));
 			InitUtils.setup(item, name + "_plate");
+		}
+
+		public ItemStack getStack() {
+			return new ItemStack(item);
+		}
+
+		public ItemStack getStack(int amount) {
+			return new ItemStack(item, amount);
+		}
+
+		@Override
+		public Item asItem() {
+			return item;
+		}
+	}
+
+	public enum DrillHeads implements ItemConvertible {
+		IRON(5,1000, 100, 50, 10, 1),
+		STEEL(10,3000, 100, 50, 10, 1),
+		IRIDIUM(16,60000, 100, 50, 10, 100),
+		DEBUG(96,100000, 0, 0, 0, 500, false,false,0,true);
+
+		public final String name;
+		public final Item item;
+
+		DrillHeads(int radius, int durability, double energyPerBlock, int fluidPerBlock, int durabilityPerBlock, double speedFactor) {
+			name = this.toString().toLowerCase(Locale.ROOT);
+			item = new DrillHeadItem(new Item.Settings().group(TechReborn.ITEMGROUP).maxCount(1).maxDamage(durability), radius, energyPerBlock, fluidPerBlock, durabilityPerBlock, speedFactor);
+
+			InitUtils.setup(item, name + "_drill_head");
+		}
+
+		DrillHeads(int radius, int durability, double energyPerBlock, int fluidPerBlock, int durabilityPerBlock, int speedFactor, boolean silkTouch, boolean voidTrash, int fortune, boolean voidAll) {
+			name = this.toString().toLowerCase(Locale.ROOT);
+			item = new DrillHeadItem(new Item.Settings().group(TechReborn.ITEMGROUP).maxCount(1).maxDamage(durability), radius, energyPerBlock, fluidPerBlock, durabilityPerBlock, speedFactor,
+					silkTouch, voidTrash, fortune, voidAll);
+
+			InitUtils.setup(item, name + "_drill_head");
 		}
 
 		public ItemStack getStack() {

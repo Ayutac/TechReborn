@@ -1,0 +1,37 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "techreborn:block/machines/structure/drill_head_bottom",
+		"1": "techreborn:block/machines/structure/drill_head_side",
+		"2": "techreborn:block/machines/structure/drill_head_top",
+		"particle": "techreborn:block/machines/structure/drill_head_bottom"
+	},
+	"elements": [
+		{
+			"from": [3, 12, 3],
+			"to": [13, 16, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 20, 11]},
+			"faces": {
+				"north": {"uv": [3, 0, 13, 4], "texture": "#1"},
+				"east": {"uv": [3, 0, 13, 4], "texture": "#1"},
+				"south": {"uv": [3, 0, 13, 4], "texture": "#1"},
+				"west": {"uv": [3, 0, 13, 4], "texture": "#1"},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#2"},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4, 15, 4],
+			"to": [12, 19, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12, 23, 12]},
+			"faces": {
+				"north": {"uv": [4, 12, 12, 16], "texture": "#1"},
+				"east": {"uv": [4, 12, 12, 16], "texture": "#1"},
+				"south": {"uv": [4, 12, 12, 16], "texture": "#1"},
+				"west": {"uv": [4, 12, 12, 16], "texture": "#1"},
+				"up": {"uv": [4, 4, 12, 12], "texture": "#2"},
+				"down": {"uv": [4, 4, 12, 12], "texture": "#0"}
+			}
+		}
+	]
+}
