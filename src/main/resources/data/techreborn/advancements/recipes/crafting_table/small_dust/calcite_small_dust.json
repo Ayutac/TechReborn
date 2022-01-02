@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_calcite_small_dust": {
+	"has_calcite_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:calcite_small_dust"]
+			"items": ["techreborn:calcite_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_calcite_small_dust",
+	  "has_calcite_dust",
 	  "has_the_recipe"
 	]
   ]

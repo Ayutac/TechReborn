@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_almandine_small_dust": {
+	"has_almandine_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:almandine_small_dust"]
+			"items": ["techreborn:almandine_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_almandine_small_dust",
+	  "has_almandine_dust",
 	  "has_the_recipe"
 	]
   ]

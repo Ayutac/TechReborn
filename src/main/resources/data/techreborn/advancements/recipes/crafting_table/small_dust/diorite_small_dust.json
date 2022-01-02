@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_diorite_small_dust": {
+	"has_diorite_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:diorite_small_dust"]
+			"items": ["techreborn:diorite_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_diorite_small_dust",
+	  "has_diorite_dust",
 	  "has_the_recipe"
 	]
   ]

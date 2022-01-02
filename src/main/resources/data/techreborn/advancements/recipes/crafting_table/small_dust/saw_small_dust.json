@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_saw_small_dust": {
+	"has_saw_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:saw_small_dust"]
+			"items": ["techreborn:saw_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_saw_small_dust",
+	  "has_saw_dust",
 	  "has_the_recipe"
 	]
   ]

@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_chrome_small_dust": {
+	"has_chrome_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:chrome_small_dust"]
+			"items": ["techreborn:chrome_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_chrome_small_dust",
+	  "has_chrome_dust",
 	  "has_the_recipe"
 	]
   ]

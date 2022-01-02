@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_magnesium_small_dust": {
+	"has_magnesium_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:magnesium_small_dust"]
+			"items": ["techreborn:magnesium_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_magnesium_small_dust",
+	  "has_magnesium_dust",
 	  "has_the_recipe"
 	]
   ]

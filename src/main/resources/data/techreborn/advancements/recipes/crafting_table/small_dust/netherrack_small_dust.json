@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_netherrack_small_dust": {
+	"has_netherrack_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:netherrack_small_dust"]
+			"items": ["techreborn:netherrack_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_netherrack_small_dust",
+	  "has_netherrack_dust",
 	  "has_the_recipe"
 	]
   ]

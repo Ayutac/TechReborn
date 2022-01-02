@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_uvarovite_small_dust": {
+	"has_uvarovite_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:uvarovite_small_dust"]
+			"items": ["techreborn:uvarovite_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_uvarovite_small_dust",
+	  "has_uvarovite_dust",
 	  "has_the_recipe"
 	]
   ]

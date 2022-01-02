@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_andesite_small_dust": {
+	"has_andesite_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:andesite_small_dust"]
+			"items": ["techreborn:andesite_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_andesite_small_dust",
+	  "has_andesite_dust",
 	  "has_the_recipe"
 	]
   ]

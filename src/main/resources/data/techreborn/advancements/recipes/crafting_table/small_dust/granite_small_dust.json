@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_granite_small_dust": {
+	"has_granite_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:granite_small_dust"]
+			"items": ["techreborn:granite_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_granite_small_dust",
+	  "has_granite_dust",
 	  "has_the_recipe"
 	]
   ]

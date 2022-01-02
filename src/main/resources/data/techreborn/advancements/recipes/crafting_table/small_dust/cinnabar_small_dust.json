@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_cinnabar_small_dust": {
+	"has_cinnabar_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:cinnabar_small_dust"]
+			"items": ["techreborn:cinnabar_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_cinnabar_small_dust",
+	  "has_cinnabar_dust",
 	  "has_the_recipe"
 	]
   ]

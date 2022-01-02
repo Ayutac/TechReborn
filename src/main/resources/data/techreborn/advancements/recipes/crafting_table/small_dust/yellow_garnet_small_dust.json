@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_yellow_garnet_small_dust": {
+	"has_yellow_garnet_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:yellow_garnet_small_dust"]
+			"items": ["techreborn:yellow_garnet_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_yellow_garnet_small_dust",
+	  "has_yellow_garnet_dust",
 	  "has_the_recipe"
 	]
   ]

@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_grossular_small_dust": {
+	"has_grossular_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:grossular_small_dust"]
+			"items": ["techreborn:grossular_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_grossular_small_dust",
+	  "has_grossular_dust",
 	  "has_the_recipe"
 	]
   ]

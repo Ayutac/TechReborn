@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_endstone_small_dust": {
+	"has_endstone_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:endstone_small_dust"]
+			"items": ["techreborn:endstone_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_endstone_small_dust",
+	  "has_endstone_dust",
 	  "has_the_recipe"
 	]
   ]

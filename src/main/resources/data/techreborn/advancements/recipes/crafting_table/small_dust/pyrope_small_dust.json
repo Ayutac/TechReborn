@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_pyrope_small_dust": {
+	"has_pyrope_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:pyrope_small_dust"]
+			"items": ["techreborn:pyrope_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_pyrope_small_dust",
+	  "has_pyrope_dust",
 	  "has_the_recipe"
 	]
   ]

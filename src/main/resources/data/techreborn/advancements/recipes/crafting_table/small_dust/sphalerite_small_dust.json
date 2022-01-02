@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_sphalerite_small_dust": {
+	"has_sphalerite_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:sphalerite_small_dust"]
+			"items": ["techreborn:sphalerite_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_sphalerite_small_dust",
+	  "has_sphalerite_dust",
 	  "has_the_recipe"
 	]
   ]

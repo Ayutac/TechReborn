@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_titanium_small_dust": {
+	"has_titanium_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:titanium_small_dust"]
+			"items": ["techreborn:titanium_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_titanium_small_dust",
+	  "has_titanium_dust",
 	  "has_the_recipe"
 	]
   ]

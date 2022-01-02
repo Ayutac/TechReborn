@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_olivine_small_dust": {
+	"has_olivine_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:olivine_small_dust"]
+			"items": ["techreborn:olivine_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_olivine_small_dust",
+	  "has_olivine_dust",
 	  "has_the_recipe"
 	]
   ]

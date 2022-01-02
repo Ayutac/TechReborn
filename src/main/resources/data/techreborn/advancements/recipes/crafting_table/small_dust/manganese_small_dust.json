@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_manganese_small_dust": {
+	"has_manganese_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:manganese_small_dust"]
+			"items": ["techreborn:manganese_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_manganese_small_dust",
+	  "has_manganese_dust",
 	  "has_the_recipe"
 	]
   ]

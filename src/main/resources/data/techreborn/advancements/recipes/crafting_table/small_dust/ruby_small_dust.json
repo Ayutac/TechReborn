@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_ruby_small_dust": {
+	"has_ruby_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:ruby_small_dust"]
+			"items": ["techreborn:ruby_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_ruby_small_dust",
+	  "has_ruby_dust",
 	  "has_the_recipe"
 	]
   ]

@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_emerald_small_dust": {
+	"has_emerald_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:emerald_small_dust"]
+			"items": ["techreborn:emerald_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_emerald_small_dust",
+	  "has_emerald_dust",
 	  "has_the_recipe"
 	]
   ]

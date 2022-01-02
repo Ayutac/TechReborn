@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_diamond_small_dust": {
+	"has_diamond_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:diamond_small_dust"]
+			"items": ["techreborn:diamond_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_diamond_small_dust",
+	  "has_diamond_dust",
 	  "has_the_recipe"
 	]
   ]

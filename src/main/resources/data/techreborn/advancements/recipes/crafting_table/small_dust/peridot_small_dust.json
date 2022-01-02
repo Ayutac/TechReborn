@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_peridot_small_dust": {
+	"has_peridot_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:peridot_small_dust"]
+			"items": ["techreborn:peridot_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_peridot_small_dust",
+	  "has_peridot_dust",
 	  "has_the_recipe"
 	]
   ]

@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_dark_ashes_small_dust": {
+	"has_dark_ashes_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:dark_ashes_small_dust"]
+			"items": ["techreborn:dark_ashes_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_dark_ashes_small_dust",
+	  "has_dark_ashes_dust",
 	  "has_the_recipe"
 	]
   ]

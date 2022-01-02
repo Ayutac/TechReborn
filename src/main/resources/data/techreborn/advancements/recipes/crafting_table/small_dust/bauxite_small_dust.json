@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_bauxite_small_dust": {
+	"has_bauxite_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:bauxite_small_dust"]
+			"items": ["techreborn:bauxite_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_bauxite_small_dust",
+	  "has_bauxite_dust",
 	  "has_the_recipe"
 	]
   ]

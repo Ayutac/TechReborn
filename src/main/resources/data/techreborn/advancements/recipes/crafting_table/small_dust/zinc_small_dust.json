@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_zinc_small_dust": {
+	"has_zinc_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:zinc_small_dust"]
+			"items": ["techreborn:zinc_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_zinc_small_dust",
+	  "has_zinc_dust",
 	  "has_the_recipe"
 	]
   ]

@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_sodalite_small_dust": {
+	"has_sodalite_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:sodalite_small_dust"]
+			"items": ["techreborn:sodalite_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_sodalite_small_dust",
+	  "has_sodalite_dust",
 	  "has_the_recipe"
 	]
   ]

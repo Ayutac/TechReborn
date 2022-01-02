@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_steel_small_dust": {
+	"has_steel_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:steel_small_dust"]
+			"items": ["techreborn:steel_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_steel_small_dust",
+	  "has_steel_dust",
 	  "has_the_recipe"
 	]
   ]

@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_ender_pearl_small_dust": {
+	"has_ender_pearl_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:ender_pearl_small_dust"]
+			"items": ["techreborn:ender_pearl_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_ender_pearl_small_dust",
+	  "has_ender_pearl_dust",
 	  "has_the_recipe"
 	]
   ]

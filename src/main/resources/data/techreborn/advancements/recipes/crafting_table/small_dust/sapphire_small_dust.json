@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_sapphire_small_dust": {
+	"has_sapphire_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:sapphire_small_dust"]
+			"items": ["techreborn:sapphire_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_sapphire_small_dust",
+	  "has_sapphire_dust",
 	  "has_the_recipe"
 	]
   ]

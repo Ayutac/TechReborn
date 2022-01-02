@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_lazurite_small_dust": {
+	"has_lazurite_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:lazurite_small_dust"]
+			"items": ["techreborn:lazurite_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_lazurite_small_dust",
+	  "has_lazurite_dust",
 	  "has_the_recipe"
 	]
   ]

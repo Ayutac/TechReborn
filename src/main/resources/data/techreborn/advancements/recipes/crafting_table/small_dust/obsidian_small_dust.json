@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_obsidian_small_dust": {
+	"has_obsidian_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:obsidian_small_dust"]
+			"items": ["techreborn:obsidian_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_obsidian_small_dust",
+	  "has_obsidian_dust",
 	  "has_the_recipe"
 	]
   ]

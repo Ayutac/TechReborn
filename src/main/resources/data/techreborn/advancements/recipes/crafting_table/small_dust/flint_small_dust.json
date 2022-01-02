@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_flint_small_dust": {
+	"has_flint_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:flint_small_dust"]
+			"items": ["techreborn:flint_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_flint_small_dust",
+	  "has_flint_dust",
 	  "has_the_recipe"
 	]
   ]

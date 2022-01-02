@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_tungsten_small_dust": {
+	"has_tungsten_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:tungsten_small_dust"]
+			"items": ["techreborn:tungsten_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_tungsten_small_dust",
+	  "has_tungsten_dust",
 	  "has_the_recipe"
 	]
   ]

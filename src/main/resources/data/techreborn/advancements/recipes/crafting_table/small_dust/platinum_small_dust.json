@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_platinum_small_dust": {
+	"has_platinum_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:platinum_small_dust"]
+			"items": ["techreborn:platinum_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_platinum_small_dust",
+	  "has_platinum_dust",
 	  "has_the_recipe"
 	]
   ]

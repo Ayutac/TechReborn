@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_saltpeter_small_dust": {
+	"has_saltpeter_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:saltpeter_small_dust"]
+			"items": ["techreborn:saltpeter_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_saltpeter_small_dust",
+	  "has_saltpeter_dust",
 	  "has_the_recipe"
 	]
   ]

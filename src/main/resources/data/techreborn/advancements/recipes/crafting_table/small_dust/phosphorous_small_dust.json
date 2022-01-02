@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_phosphorous_small_dust": {
+	"has_phosphorous_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:phosphorous_small_dust"]
+			"items": ["techreborn:phosphorous_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_phosphorous_small_dust",
+	  "has_phosphorous_dust",
 	  "has_the_recipe"
 	]
   ]

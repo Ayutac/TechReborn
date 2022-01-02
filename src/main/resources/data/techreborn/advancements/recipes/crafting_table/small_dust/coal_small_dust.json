@@ -6,12 +6,12 @@
 	]
   },
   "criteria": {
-	"has_coal_small_dust": {
+	"has_coal_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
 		  {
-			"items": ["techreborn:coal_small_dust"]
+			"items": ["techreborn:coal_dust"]
 		  }
 		]
 	  }
@@ -25,7 +25,7 @@
   },
   "requirements": [
 	[
-	  "has_coal_small_dust",
+	  "has_coal_dust",
 	  "has_the_recipe"
 	]
   ]
