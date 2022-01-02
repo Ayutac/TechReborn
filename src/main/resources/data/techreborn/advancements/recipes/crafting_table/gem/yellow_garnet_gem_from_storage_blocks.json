@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+	"recipes": [
+	  "techreborn:crafting_table/yellow_garnet_gem_from_storage_blocks"
+	]
+  },
+  "criteria": {
+	"has_yellow_garnet_block": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"items": [
+		  {
+			"tag": "c:yellow_garnet_blocks"
+		  }
+		]
+	  }
+	},
+	"has_the_recipe": {
+	  "trigger": "minecraft:recipe_unlocked",
+	  "conditions": {
+		"recipe": "techreborn:crafting_table/yellow_garnet_gem_from_storage_blocks"
+	  }
+	}
+  },
+  "requirements": [
+	[
+	  "has_yellow_garnet_block",
+	  "has_the_recipe"
+	]
+  ]
+}
