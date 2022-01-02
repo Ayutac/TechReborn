@@ -1,0 +1,32 @@
+﻿{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+	"recipes": [
+	  "techreborn:crafting_table/dust/cinnabar_dust"
+	]
+  },
+  "criteria": {
+	"has_cinnabar_small_dust": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"items": [
+		  {
+			"items": ["techreborn:cinnabar_small_dust"]
+		  }
+		]
+	  }
+	},
+	"has_the_recipe": {
+	  "trigger": "minecraft:recipe_unlocked",
+	  "conditions": {
+		"recipe": "techreborn:crafting_table/dust/cinnabar_dust"
+	  }
+	}
+  },
+  "requirements": [
+	[
+	  "has_cinnabar_small_dust",
+	  "has_the_recipe"
+	]
+  ]
+}
