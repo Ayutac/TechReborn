@@ -1,0 +1,32 @@
+﻿{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+	"recipes": [
+	  "techreborn:crafting_table/small_dust/saltpeter_small_dust"
+	]
+  },
+  "criteria": {
+	"has_saltpeter_small_dust": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"items": [
+		  {
+			"items": ["techreborn:saltpeter_small_dust"]
+		  }
+		]
+	  }
+	},
+	"has_the_recipe": {
+	  "trigger": "minecraft:recipe_unlocked",
+	  "conditions": {
+		"recipe": "techreborn:crafting_table/small_dust/saltpeter_small_dust"
+	  }
+	}
+  },
+  "requirements": [
+	[
+	  "has_saltpeter_small_dust",
+	  "has_the_recipe"
+	]
+  ]
+}
