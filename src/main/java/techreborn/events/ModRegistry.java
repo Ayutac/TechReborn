@@ -30,7 +30,6 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Settings;
 import net.minecraft.item.Items;
-import net.minecraft.item.ToolMaterials;
 import net.minecraft.sound.BlockSoundGroup;
 import reborncore.RebornRegistry;
 import reborncore.common.powerSystem.RcEnergyTier;
@@ -171,6 +170,11 @@ public class ModRegistry {
 		RebornRegistry.registerItem(TRContent.PERIDOT_CHESTPLATE = InitUtils.setup(new TRArmourItem(TRArmorMaterials.PERIDOT, EquipmentSlot.CHEST), "peridot_chestplate"));
 		RebornRegistry.registerItem(TRContent.PERIDOT_LEGGINGS = InitUtils.setup(new TRArmourItem(TRArmorMaterials.PERIDOT, EquipmentSlot.LEGS), "peridot_leggings"));
 		RebornRegistry.registerItem(TRContent.PERIDOT_BOOTS = InitUtils.setup(new TRArmourItem(TRArmorMaterials.PERIDOT, EquipmentSlot.FEET), "peridot_boots"));
+
+		RebornRegistry.registerItem(TRContent.SILVER_HELMET = InitUtils.setup(new TRArmourItem(TRArmorMaterials.SILVER, EquipmentSlot.HEAD), "silver_helmet"));
+		RebornRegistry.registerItem(TRContent.SILVER_CHESTPLATE = InitUtils.setup(new TRArmourItem(TRArmorMaterials.SILVER, EquipmentSlot.CHEST), "silver_chestplate"));
+		RebornRegistry.registerItem(TRContent.SILVER_LEGGINGS = InitUtils.setup(new TRArmourItem(TRArmorMaterials.SILVER, EquipmentSlot.LEGS), "silver_leggings"));
+		RebornRegistry.registerItem(TRContent.SILVER_BOOTS = InitUtils.setup(new TRArmourItem(TRArmorMaterials.SILVER, EquipmentSlot.FEET), "silver_boots"));
 
 		// Battery
 		RebornRegistry.registerItem(TRContent.RED_CELL_BATTERY = InitUtils.setup(new BatteryItem(TechRebornConfig.redCellBatteryMaxCharge, RcEnergyTier.LOW), "red_cell_battery"));
