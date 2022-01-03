@@ -16,7 +16,7 @@
 		]
 	  }
 	},
-	"has_diorite_dust_dust": {
+	"has_diorite_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [

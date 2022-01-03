@@ -6,7 +6,7 @@
 	]
   },
   "criteria": {
-	"has_basalt_dust": {
+	"has_basalt_small_dust": {
 	  "trigger": "minecraft:inventory_changed",
 	  "conditions": {
 		"items": [
