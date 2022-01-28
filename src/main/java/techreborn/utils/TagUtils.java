@@ -24,6 +24,7 @@
 
 package techreborn.utils;
 
+import net.fabricmc.fabric.api.tag.TagFactory;
 import net.minecraft.block.Block;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.Item;
@@ -31,22 +32,29 @@ import net.minecraft.tag.Tag;
 import net.minecraft.tag.TagGroup;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.NotNull;
 
-public class TagUtils {
+public final class TagUtils {
 
-	public static <T> boolean hasTag(T type, Tag<T> tag) {
+	private TagUtils() {/* No instantiation allowed */}
+
+	public static <T> boolean hasTag(T type, @NotNull Tag<T> tag) {
 		return tag.contains(type);
 	}
 
-	public static TagGroup<Block> getAllBlockTags(World world) {
+	public static @NotNull TagGroup<Block> getAllBlockTags(@NotNull World world) {
 		return world.getTagManager().getOrCreateTagGroup(Registry.BLOCK_KEY);
 	}
 
-	public static TagGroup<Item> getAllItemTags(World world) {
+	public static @NotNull TagGroup<Item> getAllItemTags(@NotNull World world) {
 		return world.getTagManager().getOrCreateTagGroup(Registry.ITEM_KEY);
 	}
 
-	public static TagGroup<Fluid> getAllFluidTags(World world) {
+	public static @NotNull TagGroup<Fluid> getAllFluidTags(@NotNull World world) {
 		return world.getTagManager().getOrCreateTagGroup(Registry.FLUID_KEY);
+	}
+
+	public static @NotNull Tag.Identified<Block> toBlockTag(@NotNull Tag.Identified<?> tag) {
+		return TagFactory.BLOCK.create(tag.getId());
 	}
 }

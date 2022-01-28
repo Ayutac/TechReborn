@@ -70,12 +70,12 @@ public class StackToolTipHandler implements ItemTooltipCallback {
 			if (ore.isDeepslate()) {
 				TRContent.Ores normal = ore.getUnDeepslate();
 				if (normal.distribution != null && normal.distribution.dimension != TargetDimension.OVERWORLD)
-					UNOBTAINABLE_ORES.add(ore.block);
+					UNOBTAINABLE_ORES.add(ore.asBlock());
 				continue;
 			}
 
 			if (ore.distribution != null) {
-				ORE_DISTRIBUTION_MAP.put(ore.block, ore.distribution);
+				ORE_DISTRIBUTION_MAP.put(ore.asBlock(), ore.distribution);
 
 				if (ore.distribution.dimension != TargetDimension.OVERWORLD) {
 					continue; // No Deepslate in other dims
@@ -84,7 +84,7 @@ public class StackToolTipHandler implements ItemTooltipCallback {
 				TRContent.Ores deepslate = ore.getDeepslate();
 				if (deepslate != null) {
 					// Deepslate shares the same distribution as the stone version.
-					ORE_DISTRIBUTION_MAP.put(deepslate.block, ore.distribution);
+					ORE_DISTRIBUTION_MAP.put(deepslate.asBlock(), ore.distribution);
 				}
 			}
 		}

@@ -1,7 +1,7 @@
 /*
- * This file is part of TechReborn, licensed under the MIT License (MIT).
+ * This file is part of RebornCore, licensed under the MIT License (MIT).
  *
- * Copyright (c) 2020 TechReborn
+ * Copyright (c) 2021 TeamReborn
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,23 +22,20 @@
  * SOFTWARE.
  */
 
-package techreborn.datagen
+package reborncore.common.blocks;
 
-import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator
-import techreborn.datagen.recipes.smelting.SmeltingRecipesProvider
-import techreborn.datagen.recipes.crafting.CraftingRecipesProvider
-import techreborn.datagen.tags.TRTagProvider
-import techreborn.datagen.tags.WaterExplosionTagProvider
+import net.minecraft.block.Block;
 
-class TechRebornDataGen implements DataGeneratorEntrypoint {
+/**
+ * For if an item has a block form.
+ * @see Block
+ */
+public interface BlockConvertible {
 
-    @Override
-    void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-        fabricDataGenerator.addProvider(WaterExplosionTagProvider.&new)
-		fabricDataGenerator.addProvider(TRTagProvider.&new)
-        // tags before all else, very important!!
-        fabricDataGenerator.addProvider(SmeltingRecipesProvider.&new)
-        fabricDataGenerator.addProvider(CraftingRecipesProvider.&new)
-    }
+	/**
+	 * Returns the block form of this object.
+	 * @return the block form of this object
+	 */
+	Block asBlock();
+
 }

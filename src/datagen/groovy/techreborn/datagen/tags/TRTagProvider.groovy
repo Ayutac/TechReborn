@@ -28,8 +28,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.ItemTagProvider
 import techreborn.init.TRContent
 
-class TRItemTagProvider extends ItemTagProvider {
-	TRItemTagProvider(FabricDataGenerator dataGenerator) {
+class TRTagProvider extends ItemTagProvider {
+	TRTagProvider(FabricDataGenerator dataGenerator) {
 		super(dataGenerator)
 	}
 
@@ -37,10 +37,12 @@ class TRItemTagProvider extends ItemTagProvider {
 	protected void generateTags() {
 		TRContent.Ores.values().each { ore ->
 			getOrCreateTagBuilder(ore.asTag()).add(ore.asItem())
+			getOrCreateTagBuilder(ore.asBlockTag()).add(ore.asBlock())
 			getOrCreateTagBuilder(TRContent.ORES_TAG).add(ore.asItem())
 		}
 		TRContent.StorageBlocks.values().each { block ->
 			getOrCreateTagBuilder(block.asTag()).add(block.asItem())
+			getOrCreateTagBuilder(block.asBlockTag()).add(block.asBlock())
 			getOrCreateTagBuilder(TRContent.STORAGE_BLOCK_TAG).add(block.asItem())
 		}
 		TRContent.Dusts.values().each { dust ->

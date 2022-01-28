@@ -41,6 +41,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import reborncore.api.blockentity.IUpgrade;
+import reborncore.common.blocks.BlockConvertible;
 import reborncore.common.fluid.FluidValue;
 import reborncore.common.misc.TagConvertible;
 import reborncore.common.powerSystem.PowerAcceptorBlockEntity;
@@ -89,6 +90,7 @@ import techreborn.items.DynamicCellItem;
 import techreborn.items.UpgradeItem;
 import techreborn.items.armor.QuantumSuitItem;
 import techreborn.utils.InitUtils;
+import techreborn.utils.TagUtils;
 import techreborn.world.OreDistribution;
 
 import java.util.*;
@@ -403,7 +405,7 @@ public class TRContent {
 
 	private final static Map<Ores, Ores> unDeepslateMap = new HashMap<>();
 
-	public enum Ores implements ItemConvertible, TagConvertible<Item> {
+	public enum Ores implements ItemConvertible, BlockConvertible, TagConvertible<Item> {
 		// when changing ores also change data/minecraft/tags/blocks for correct mining level
 		BAUXITE(OreDistribution.BAUXITE),
 		CINNABAR(OreDistribution.CINNABAR),
@@ -435,9 +437,10 @@ public class TRContent {
 		DEEPSLATE_TUNGSTEN(TUNGSTEN);
 
 		public final String name;
-		public final Block block;
+		private final Block block;
 		public final OreDistribution distribution;
 		private final Tag.Identified<Item> tag;
+		private final Tag.Identified<Block> blockTag;
 
 		Ores(OreDistribution distribution, UniformIntProvider experienceDroppedFallback) {
 			name = this.toString().toLowerCase(Locale.ROOT);
@@ -450,6 +453,7 @@ public class TRContent {
 			InitUtils.setup(block, name + "_ore");
 			tag = TagFactory.ITEM.create(new Identifier("c",
 					(name.startsWith("deepslate_") ? name.substring(name.indexOf('_')+1): name) + "_ores"));
+			blockTag = TagUtils.toBlockTag(tag);
 			this.distribution = distribution;
 		}
 
@@ -469,8 +473,17 @@ public class TRContent {
 		}
 
 		@Override
+		public Block asBlock() {
+			return block;
+		}
+
+		@Override
 		public Tag.Identified<Item> asTag() {
 			return tag;
+		}
+
+		public Tag.Identified<Block> asBlockTag() {
+			return blockTag;
 		}
 
 		public TRContent.Ores getDeepslate() {
@@ -490,7 +503,7 @@ public class TRContent {
 
 	public static final Tag.Identified<Item> STORAGE_BLOCK_TAG = TagFactory.ITEM.create(new Identifier(TechReborn.MOD_ID, "storage_blocks"));
 
-	public enum StorageBlocks implements ItemConvertible, TagConvertible<Item> {
+	public enum StorageBlocks implements ItemConvertible, BlockConvertible, TagConvertible<Item> {
 		ALUMINUM, BRASS, BRONZE, CHROME, ELECTRUM, INVAR, IRIDIUM, IRIDIUM_REINFORCED_STONE,
 		IRIDIUM_REINFORCED_TUNGSTENSTEEL, LEAD, NICKEL, PERIDOT, PLATINUM, RAW_IRIDIUM, RAW_LEAD, RAW_SILVER, RAW_TIN,
 		RAW_TUNGSTEN, RED_GARNET, REFINED_IRON, RUBY, SAPPHIRE, SILVER, STEEL, TIN, TITANIUM, TUNGSTEN, TUNGSTENSTEEL,
@@ -502,12 +515,14 @@ public class TRContent {
 		private final SlabBlock slabBlock;
 		private final WallBlock wallBlock;
 		private final Tag.Identified<Item> tag;
+		private final Tag.Identified<Block> blockTag;
 
 		StorageBlocks() {
 			name = this.toString().toLowerCase(Locale.ROOT);
 			block = new BlockStorage();
 			InitUtils.setup(block, name + "_storage_block");
 			tag = TagFactory.ITEM.create(new Identifier("c", name + "_blocks"));
+			blockTag = TagUtils.toBlockTag(tag);
 
 			stairsBlock = new TechRebornStairsBlock(block.getDefaultState(), FabricBlockSettings.copyOf(block));
 			InitUtils.setup(stairsBlock, name + "_storage_block_stairs");
@@ -525,8 +540,17 @@ public class TRContent {
 		}
 
 		@Override
+		public Block asBlock() {
+			return block;
+		}
+
+		@Override
 		public Tag.Identified<Item> asTag() {
 			return tag;
+		}
+
+		public Tag.Identified<Block> asBlockTag() {
+			return blockTag;
 		}
 
 		public Block getBlock() {
