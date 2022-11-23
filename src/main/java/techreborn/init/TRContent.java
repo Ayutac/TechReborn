@@ -769,6 +769,11 @@ public class TRContent {
 		LAUNCHPAD(new GenericMachineBlock(GuiType.LAUNCHPAD, LaunchpadBlockEntity::new)),
 		ELEVATOR(new GenericMachineBlock(GuiType.ELEVATOR, ElevatorBlockEntity::new)),
 
+		WATER_GENERATOR(new GenericMachineBlock(GuiType.WATER_GENERATOR, WaterGeneratorBlockEntity::new)),
+		COBBLESTONE_GENERATOR(new GenericMachineBlock(GuiType.COBBLESTONE_GENERATOR, CobblestoneGeneratorBlockEntity::new)),
+		BASALT_GENERATOR(new GenericMachineBlock(GuiType.BASALT_GENERATOR, BasaltGeneratorBlockEntity::new)),
+		LAVA_GENERATOR(new GenericMachineBlock(GuiType.LAVA_GENERATOR, LavaGeneratorBlockEntity::new)),
+
 		DIESEL_GENERATOR(new GenericGeneratorBlock(GuiType.DIESEL_GENERATOR, DieselGeneratorBlockEntity::new)),
 		DRAGON_EGG_SYPHON(new GenericGeneratorBlock(null, DragonEggSyphonBlockEntity::new)),
 		FUSION_COIL(new BlockFusionCoil()),

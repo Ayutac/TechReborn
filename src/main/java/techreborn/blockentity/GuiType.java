@@ -125,6 +125,11 @@ public final class GuiType<T extends BlockEntity> implements IMachineGuiHandler 
 	public static final GuiType<LaunchpadBlockEntity> LAUNCHPAD = register("launchpad");
 	public static final GuiType<ElevatorBlockEntity> ELEVATOR = register("elevator");
 
+	public static final GuiType<WaterGeneratorBlockEntity> WATER_GENERATOR = register("water_generator");
+	public static final GuiType<CobblestoneGeneratorBlockEntity> COBBLESTONE_GENERATOR = register("cobblestone_generator");
+	public static final GuiType<BasaltGeneratorBlockEntity> BASALT_GENERATOR = register("basalt_generator");
+	public static final GuiType<LavaGeneratorBlockEntity> LAVA_GENERATOR = register("lava_generator");
+
 	private static <T extends BlockEntity> GuiType<T> register(String id) {
 		return register(new Identifier("techreborn", id));
 	}
